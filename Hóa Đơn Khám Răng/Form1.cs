@@ -19,7 +19,7 @@ namespace Hóa_Đơn_Khám_Răng
 
         private void label2_Click(object sender, EventArgs e)
         {
-
+            //Tasdsad
         }
 
         private void lblDichVu_Click(object sender, EventArgs e)
