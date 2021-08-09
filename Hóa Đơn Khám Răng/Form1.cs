@@ -36,5 +36,10 @@ namespace Hóa_Đơn_Khám_Răng
         {
 
         }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

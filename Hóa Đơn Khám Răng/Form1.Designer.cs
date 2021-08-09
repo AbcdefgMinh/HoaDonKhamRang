@@ -39,7 +39,9 @@ namespace Hóa_Đơn_Khám_Răng
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.cbTramRang = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.cbCaoVoi = new System.Windows.Forms.CheckBox();
+            this.txt = new System.Windows.Forms.TextBox();
+            this.lblTienNhoRang = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +59,7 @@ namespace Hóa_Đơn_Khám_Răng
             // 
             this.lblHoTen.AutoSize = true;
             this.lblHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHoTen.Location = new System.Drawing.Point(74, 100);
+            this.lblHoTen.Location = new System.Drawing.Point(74, 91);
             this.lblHoTen.Name = "lblHoTen";
             this.lblHoTen.Size = new System.Drawing.Size(79, 22);
             this.lblHoTen.TabIndex = 0;
@@ -68,7 +70,7 @@ namespace Hóa_Đơn_Khám_Răng
             // 
             this.lblDichVu.AutoSize = true;
             this.lblDichVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDichVu.Location = new System.Drawing.Point(73, 164);
+            this.lblDichVu.Location = new System.Drawing.Point(73, 146);
             this.lblDichVu.Name = "lblDichVu";
             this.lblDichVu.Size = new System.Drawing.Size(168, 26);
             this.lblDichVu.TabIndex = 0;
@@ -80,7 +82,7 @@ namespace Hóa_Đơn_Khám_Răng
             this.lblTramRang.AutoSize = true;
             this.lblTramRang.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lblTramRang.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTramRang.Location = new System.Drawing.Point(74, 221);
+            this.lblTramRang.Location = new System.Drawing.Point(74, 195);
             this.lblTramRang.Name = "lblTramRang";
             this.lblTramRang.Size = new System.Drawing.Size(93, 22);
             this.lblTramRang.TabIndex = 0;
@@ -91,7 +93,7 @@ namespace Hóa_Đơn_Khám_Răng
             // 
             this.lblCaoVoi.AutoSize = true;
             this.lblCaoVoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCaoVoi.Location = new System.Drawing.Point(74, 274);
+            this.lblCaoVoi.Location = new System.Drawing.Point(74, 243);
             this.lblCaoVoi.Name = "lblCaoVoi";
             this.lblCaoVoi.Size = new System.Drawing.Size(71, 22);
             this.lblCaoVoi.TabIndex = 0;
@@ -120,7 +122,7 @@ namespace Hóa_Đơn_Khám_Răng
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(203, 93);
+            this.textBox1.Location = new System.Drawing.Point(203, 81);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(300, 32);
             this.textBox1.TabIndex = 1;
@@ -135,29 +137,50 @@ namespace Hóa_Đơn_Khám_Răng
             // cbTramRang
             // 
             this.cbTramRang.AutoSize = true;
-            this.cbTramRang.Location = new System.Drawing.Point(213, 226);
+            this.cbTramRang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTramRang.Location = new System.Drawing.Point(203, 200);
             this.cbTramRang.Name = "cbTramRang";
-            this.cbTramRang.Size = new System.Drawing.Size(80, 17);
+            this.cbTramRang.Size = new System.Drawing.Size(124, 24);
             this.cbTramRang.TabIndex = 3;
-            this.cbTramRang.Text = "checkBox1";
+            this.cbTramRang.Text = "200.000 VND";
             this.cbTramRang.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // cbCaoVoi
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(213, 273);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(80, 17);
-            this.checkBox2.TabIndex = 3;
-            this.checkBox2.Text = "checkBox1";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.cbCaoVoi.AutoSize = true;
+            this.cbCaoVoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCaoVoi.Location = new System.Drawing.Point(203, 248);
+            this.cbCaoVoi.Name = "cbCaoVoi";
+            this.cbCaoVoi.Size = new System.Drawing.Size(124, 24);
+            this.cbCaoVoi.TabIndex = 3;
+            this.cbCaoVoi.Text = "300.000 VND";
+            this.cbCaoVoi.UseVisualStyleBackColor = true;
+            this.cbCaoVoi.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
+            // txt
+            // 
+            this.txt.Location = new System.Drawing.Point(233, 398);
+            this.txt.Name = "txt";
+            this.txt.Size = new System.Drawing.Size(100, 20);
+            this.txt.TabIndex = 4;
+            // 
+            // lblTienNhoRang
+            // 
+            this.lblTienNhoRang.AutoSize = true;
+            this.lblTienNhoRang.Location = new System.Drawing.Point(466, 336);
+            this.lblTienNhoRang.Name = "lblTienNhoRang";
+            this.lblTienNhoRang.Size = new System.Drawing.Size(35, 13);
+            this.lblTienNhoRang.TabIndex = 5;
+            this.lblTienNhoRang.Text = "label1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.lblTienNhoRang);
+            this.Controls.Add(this.txt);
+            this.Controls.Add(this.cbCaoVoi);
             this.Controls.Add(this.cbTramRang);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.textBox1);
@@ -188,7 +211,9 @@ namespace Hóa_Đơn_Khám_Răng
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.CheckBox cbTramRang;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox cbCaoVoi;
+        private System.Windows.Forms.TextBox txt;
+        private System.Windows.Forms.Label lblTienNhoRang;
     }
 }
 
